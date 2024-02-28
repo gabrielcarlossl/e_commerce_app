@@ -1,13 +1,14 @@
-import 'package:flutter/material.dart'
+import 'package:flutter/material.dart';
 
-class AuthScree extends StatefulWidget {
-  const AuthScree({super.key});
+class AuthScreen extends StatefulWidget {
+  static const String routeName = '/auth-screen';
+  const AuthScreen({super.key});
 
   @override
-  State<AuthScree> createState() => _AuthScreeState();
+  State<AuthScreen> createState() => _AuthScreenState();
 }
 
-class _AuthScreeState extends State<AuthScree> {
+class _AuthScreenState extends State<AuthScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold();

@@ -1,4 +1,6 @@
 import 'package:e_commerce_app/constants/global_variables.dart';
+import 'package:e_commerce_app/features/auth/screens/auth_screen.dart';
+import 'package:e_commerce_app/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'E-commerce',
       theme: ThemeData(
         scaffoldBackgroundColor: GlobalVariables.backgroundColor,
-        colorScheme: ColorScheme.light(
+        colorScheme: const ColorScheme.light(
           primary: GlobalVariables.secondaryColor,
         ),
         appBarTheme: const AppBarTheme(
@@ -25,19 +27,8 @@ class MyApp extends StatelessWidget {
             )),
         useMaterial3: true,
       ),
-      home: Scaffold(
-          appBar: AppBar(
-            title: const Text('E-commerce'),
-          ),
-          body: Column(
-            children: [
-              const Center(child: Text('Teste ')),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('Click'),
-              ),
-            ],
-          )),
+      onGenerateRoute: (settings) => generateRoute(settings),
+      home: const AuthScreen(),
     );
   }
 }
